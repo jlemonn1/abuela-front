@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api";
+const API_URL = "https://abuela.onrender.com/api";
 
 // Obtener todos los turnos en un rango de fechas
 export async function getShifts(start, end) {
