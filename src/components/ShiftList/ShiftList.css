@@ -1,0 +1,46 @@
+.shiftlist-container {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.shiftlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #f3f4f6; /* gris muy claro */
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.shiftlist-date {
+  font-weight: bold;
+  flex: 2;
+}
+
+.shiftlist-type {
+  flex: 1;
+  text-align: center;
+  font-style: italic;
+}
+
+.shiftlist-user {
+  flex: 2;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.shiftlist-empty {
+  text-align: center;
+  color: #6b7280; /* gris medio */
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}

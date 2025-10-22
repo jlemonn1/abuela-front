@@ -1,0 +1,27 @@
+.calendar-container {
+  padding: 0.5rem;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 0.25rem;
+}
+
+.calendar-header-day {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #374151; /* gris oscuro */
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+}
+
+.calendar-empty {
+  border: 1px solid transparent;
+  min-height: 3rem;
+}

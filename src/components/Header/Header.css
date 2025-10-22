@@ -1,0 +1,46 @@
+/* Reset básico para eliminar márgenes por defecto */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Contenedor principal del header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;          /* ocupar todo el ancho */
+  padding: 1rem;        /* padding interno, opcional */
+  background-color: #4f46e5; /* azul moderno */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-sizing: border-box; /* incluir padding dentro del ancho */
+}
+
+/* Título principal */
+.header-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Botón refrescar */
+.refresh-button {
+  background-color: white;
+  color: #4f46e5;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.refresh-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background-color: #e0e7ff;
+}
