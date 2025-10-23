@@ -1,18 +1,17 @@
 import React from "react";
 import "./DayCell.css";
 
-const DayCell = ({ date, shifts, onClick }) => {
-  const dayNumber = date.getDate();
+const DayCell = ({ date, shifts, onClick, extraClass }) => {
+  if (!date) return <div className="calendar-empty"></div>;
 
-  // Buscar turno mañana y tarde
+  const dayNumber = date.getDate();
   const morningShift = shifts.find((s) => s.type === "mañana");
   const afternoonShift = shifts.find((s) => s.type === "tarde");
 
   return (
-    <div className="day-cell" onClick={onClick}>
+    <div className={`day-cell ${extraClass}`} onClick={onClick}>
       <div className="day-number">{dayNumber}</div>
 
-      {/* Turno mañana */}
       <div className="shift-spot morning">
         {morningShift ? (
           <div
@@ -26,7 +25,6 @@ const DayCell = ({ date, shifts, onClick }) => {
         )}
       </div>
 
-      {/* Turno tarde */}
       <div className="shift-spot afternoon">
         {afternoonShift ? (
           <div

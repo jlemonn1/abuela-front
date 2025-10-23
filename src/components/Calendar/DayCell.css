@@ -1,39 +1,77 @@
 .day-cell {
-  border: 1px solid #d1d5db;
-  min-height: 90px; /* más alto */
+  background: rgba(200, 200, 200, 0.15); /* más visible sobre fondo blanco */
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  padding: 0.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.25rem;
-  background-color: white;
+  justify-content: space-between;
+  min-height: 80px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.day-cell:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 14px rgba(79, 70, 229, 0.25);
+}
+
+.day-cell.today {
+  background: rgba(79, 70, 229, 0.35);
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.5);
 }
 
 .day-number {
   font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
   margin-bottom: 0.25rem;
+  color: #333; /* visible sobre fondo blanco */
 }
 
+/* Turnos */
 .shift-spot {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 2px 0;
-}
-
-.shift-initial {
-  width: 24px;
-  height: 24px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: white;
-  border-radius: 50%;
+  width: 90%;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1px 0;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.shift-initial {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  animation: liquidDrop 0.5s ease;
 }
 
 .shift-empty {
-  font-size: 0.8rem;
-  color: #9ca3af; /* gris */
+  font-size: 0.75rem;
+  color: #555; /* visible sobre fondo blanco */
+}
+
+@keyframes liquidDrop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }

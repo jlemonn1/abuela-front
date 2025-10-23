@@ -7,7 +7,10 @@ const Header = () => {
 
   return (
     <header className="header-container">
-      <h1 className="header-title">AgüelaTurnos</h1>
+      <h1 className="header-title">
+        AgüelaTurnos
+        <span className="glow"></span>
+      </h1>
       <button
         className="refresh-button"
         onClick={refreshShifts}
